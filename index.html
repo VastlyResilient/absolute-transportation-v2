@@ -392,10 +392,21 @@ function cafeSet(x, z, accent){
   const P=accent||0xB3402A;
   [[0,0],[-0.55,0],[0.55,0],[0,-0.55],[0,0.55]].forEach(p=>box(x+p[0], 3.0, z+p[1], 0.6, 0.14, 0.6, P));
 }
+
+// subtle ground shadow under props — dark plane, no depth write
+function groundShadow(x, z, w, d) {
+  box(x, 0.02, z, w, 0.04, d, 0x0a0a0a, {shadow: false, opacity: 0.4});
+}
+
 // street lamp with glow
 function lampPost(x, z){
   box(x, 1.5, z, 0.18, 3.0, 0.18, 0x2a2a2a);
   box(x, 3.15, z, 0.5, 0.35, 0.5, 0xffd9a0, {shadow:false});
+}
+
+// Subtle ground shadow under props (dark, flat, no shadow casting)
+function groundShadow(x, z, w, d) {
+  box(x, 0.02, z, w, 0.04, d, 0x1a1a1a, {shadow: false});
 }
 
 
@@ -404,6 +415,12 @@ const STEEL=0x2E6B8A, STEELD=0x1a4a6a, SILVER=0x9aa0a6, BLACK=0x1a1a1a,
       WHITE=0xf8f4ec, GLASSW=0xffc966, DARK=0x0e1b2a, RED=0xD42B1E;
 
 qrPlaza();
+
+// Ground shadow helper
+function groundShadow(x, z, w, d) {
+  box(x, 0.08, z, w, 0.06, d, 0x0a0a0a, {shadow:false});
+}
+
 
 const W=16, D=10, H=10;
 // Main garage structure — low, wide
@@ -443,13 +460,26 @@ box(-W/2+3, 1.5, D/2-0.4, 2.0, 1.0, 0.4, 0x3a3a3a, {shadow:false}); // desk
 box(-W/2+3, 2.2, D/2-0.4, 0.8, 0.5, 0.3, 0x2a4a9a, {shadow:false}); // computer
 
 // ===== FLEET — 3 vehicles parked in front =====
-// Black sedan (executive)
-box(-W/2-2, 0.6, D/2+2.0, 3.5, 1.2, 1.8, 0x1a1a1a);
-box(-W/2-2, 1.5, D/2+2.0, 2.0, 0.8, 1.6, 0x1a1a1a);
+// Black sedan
+groundShadow(-W/2-2, D/2+2.0, 4.5, 2.5); (executive) — detailed
+box(-W/2-2, 0.6, D/2+2.0, 3.5, 1.2, 1.8, 0x1a1a1a);                    // lower body
+box(-W/2-2, 1.5, D/2+2.0, 2.0, 0.8, 1.6, 0x1a1a1a);                    // cabin
+box(-W/2-2, 1.5, D/2+2.85, 1.4, 0.5, 0.15, 0x8a9aaa, {shadow:false});  // windshield
+box(-W/2-2, 1.5, D/2+1.15, 1.4, 0.5, 0.15, 0x8a9aaa, {shadow:false});  // rear window
+box(-W/2-2, 1.1, D/2+2.92, 0.8, 0.35, 0.1, 0xffd9a0, {shadow:false});  // headlights
+box(-W/2-2, 1.1, D/2+1.08, 0.8, 0.35, 0.1, 0xff4444, {shadow:false});  // taillights
+[[-1.4,-0.8],[1.4,-0.8],[-1.4,0.8],[1.4,0.8]].forEach(p=>box(-W/2-2+p[0], 0.35, D/2+2.0+p[1], 0.6, 0.6, 0.25, 0x1a1a1a)); // wheels
 // Silver SUV
-box(0, 0.7, D/2+2.5, 3.8, 1.4, 2.0, SILVER);
-box(0, 1.7, D/2+2.5, 2.2, 0.9, 1.8, SILVER);
-// Black van (airport shuttle)
+groundShadow(0, D/2+2.5, 5.0, 3.0); — detailed
+box(0, 0.7, D/2+2.5, 3.8, 1.4, 2.0, SILVER);                           // lower body
+box(0, 1.7, D/2+2.5, 2.2, 0.9, 1.8, SILVER);                           // cabin
+box(0, 1.7, D/2+3.42, 1.6, 0.6, 0.15, 0x8a9aaa, {shadow:false});       // windshield
+box(0, 1.7, D/2+1.58, 1.6, 0.6, 0.15, 0x8a9aaa, {shadow:false});       // rear window
+box(0, 1.2, D/2+3.5, 0.9, 0.4, 0.1, 0xffd9a0, {shadow:false});         // headlights
+box(0, 1.2, D/2+1.5, 0.9, 0.4, 0.1, 0xff4444, {shadow:false});         // taillights
+[[-1.5,-0.9],[1.5,-0.9],[-1.5,0.9],[1.5,0.9]].forEach(p=>box(p[0], 0.4, D/2+2.5+p[1], 0.7, 0.7, 0.3, 0x2a2a2a)); // wheels
+// Black van
+groundShadow(W/2+4, D/2+2.0, 6.0, 3.5); (airport shuttle)
 van(W/2+4, D/2+2.0, 0x1a1a1a, "ABSOLUTE", WHITE, 1.1);
 
 // ===== SIDE WALL — route map / service area =====
@@ -466,7 +496,9 @@ box(W/2+0.35, 3.0, 0, 0.5, 4.0, 4.0, STEEL, {shadow:false});
 
 // ===== STREET ELEMENTS =====
 planter(-W/2-2, D/2-0.5, STEEL, 0x2f7a3a);
+groundShadow(-W/2-2, D/2-0.5, 1.2, 1.2);
 planter( W/2+2, D/2-0.5, STEEL, 0x2f7a3a);
+groundShadow(W/2+2, D/2-0.5, 1.2, 1.2);
 minifig(-W/2-3, D/2+1.0, 0x1a1a1a, 0x2a2a2a); // chauffeur
 minifig( W/2+5, D/2+3.5, STEEL, 0x2a2a2a);    // dispatcher
 lampPost(-W/2-4, D/2+4.0);
