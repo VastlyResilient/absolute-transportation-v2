@@ -159,7 +159,7 @@ body{background:#EEF2F6;color:#0E1B2A;font-family:Archivo,sans-serif;-webkit-fon
  <script src="https://unpkg.com/three@0.149.0/build/three.min.js"></script>
  <script>(function(){
    var built=false;
-   var CFG = {"bg": 924458, "accent": 3042186, "theta": 0.3, "phi": 0.78, "radius": 40, "target": {"x": 0, "y": 3.5, "z": 2}, "qr": {"url": "https://vastlyresilient.github.io/seolution-book/?ref=absolute-transportation", "size": 37, "matrix": [[1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0], [1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0], [0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1], [1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0], [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1], [1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1], [1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0], [1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0], [1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1], [0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1], [0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0], [0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1], [1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0], [1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1], [1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1], [1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0], [1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0], [1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1]]}};
+   var CFG = {"bg": 924458, "accent": 3042186, "theta": 0.3, "phi": 0.85, "radius": 40, "target": {"x": 0.2, "y": 4.45, "z": 0.5}, "qr": {"url": "https://vastlyresilient.github.io/seolution-book/?ref=absolute-transportation", "size": 37, "matrix": [[1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0], [1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0], [0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1], [1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0], [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1], [1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1], [1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0], [1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0], [1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1], [0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1], [0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0], [0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0], [0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1], [1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0], [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0], [1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1], [1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1], [1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], [1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0], [1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0], [1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1]]}, "keyColor": 14478335, "keyIntensity": 2.45, "rimColor": 6129580, "rimIntensity": 1.05, "exposure": 1.1};
    function build(){
      var mount=document.getElementById('voxel-abs');
      if(!mount) return;
@@ -168,88 +168,118 @@ body{background:#EEF2F6;color:#0E1B2A;font-family:Archivo,sans-serif;-webkit-fon
      if(built){ if(mount.__forceResize) mount.__forceResize(); return; }
      built=true;
      const THREE = window.THREE;
-// ---------- LEGO BRICK HELPERS ----------
+
 function buildVoxelScene(mount, cfg){
-  const scene = new THREE.Scene();
-  scene.background = new THREE.Color(cfg.bg);
-  const camera = new THREE.PerspectiveCamera(40, mount.clientWidth/mount.clientHeight, 0.1, 400);
-  const renderer = new THREE.WebGLRenderer({antialias:true, preserveDrawingBuffer:true});
-  renderer.setSize(mount.clientWidth, mount.clientHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  // ===== RENDERER BASELINE (remediation spec section 2) =====
+  const renderer = new THREE.WebGLRenderer({antialias:true, alpha:false});
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = cfg.exposure || 1.05;
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.setSize(mount.clientWidth, mount.clientHeight, false);
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
   mount.appendChild(renderer.domElement);
 
-  // ---- LIGHTS (warm, premium) ----
-  scene.add(new THREE.HemisphereLight(0xfff0dd, 0x1a0f08, 0.55));
-  const key = new THREE.DirectionalLight(0xffe6c0, 1.5); key.position.set(20,32,16);
-  key.castShadow=true; key.shadow.mapSize.set(2048,2048);
-  key.shadow.camera.left=-30; key.shadow.camera.right=30; key.shadow.camera.top=30; key.shadow.camera.bottom=-30;
-  key.shadow.bias=-0.0004; scene.add(key);
-  const rim = new THREE.DirectionalLight(cfg.accent, 0.5); rim.position.set(-16,12,-18); scene.add(rim);
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(cfg.bg || 0x0e0e12);
 
-  // ---- MATERIAL CACHE ----
-  const mats = {};
-  function mat(c, o={}){ const k=c+'|'+JSON.stringify(o); if(!mats[k]){ mats[k]=new THREE.MeshStandardMaterial(Object.assign({color:c, roughness:0.55, metalness:0.02}, o)); } return mats[k]; }
-
-  // ---- LEGO BRICK: box + stud(s) on top ----
-  const geoBox = new THREE.BoxGeometry(1,1,1);
-  const geoStud = new THREE.CylinderGeometry(0.34,0.34,0.2,16);
-  const world = new THREE.Group(); scene.add(world);
-  function brick(x,y,z, w,d,h, color, opts={}){
-    // Micro-voxel: clean planar faces, NO studs. w,d,h in world units.
-    const g = new THREE.Group();
-    const body = new THREE.Mesh(geoBox, mat(color, opts.mat||{}));
-    body.scale.set(w, h, d); body.castShadow=true; body.receiveShadow=true;
-    g.add(body);
-    g.position.set(x, y+h/2, z);
-    world.add(g);
-    return g;
-  }  // plain box (for interior/details, no studs)
-  function box(x,y,z, w,h,d, color, opts={}){
-    const m = new THREE.Mesh(geoBox, mat(color, opts.mat||{}));
-    m.scale.set(w,h,d); m.position.set(x,y,z);
-    m.castShadow = opts.shadow!==false; m.receiveShadow=true; world.add(m); return m;
-  }
-
-  window.__world = world; window.__brick = brick; window.__box = box; window.__mat = mat;
-  window.__scene = scene; window.__camera = camera; window.__renderer = renderer;
-  window.__cfg = cfg;
-  if(cfg.build) cfg.build({brick, box, mat, world, scene, camera, cfg});
-
-  // ---- CAMERA ORBIT ----
-  const orbit = { theta: cfg.theta!==undefined?cfg.theta:0.62, phi: cfg.phi!==undefined?cfg.phi:0.62, radius: cfg.radius||34, dragging:false, lx:0, ly:0 };
-  const target = cfg.target||{x:0,y:5,z:0};
+  const camera = new THREE.PerspectiveCamera(32, mount.clientWidth/mount.clientHeight, 0.1, 1000);
+  const orbit = {theta:cfg.theta||0.55, phi:cfg.phi||0.9, radius:cfg.radius||34};
+  const target = new THREE.Vector3(cfg.target?.x||0, cfg.target?.y||4, cfg.target?.z||2);
   function upd(){
-    orbit.phi = Math.max(0.12, Math.min(1.5, orbit.phi));
-    orbit.radius = Math.max(14, Math.min(60, orbit.radius));
     camera.position.set(
       target.x + orbit.radius*Math.sin(orbit.phi)*Math.sin(orbit.theta),
       target.y + orbit.radius*Math.cos(orbit.phi),
-      target.z + orbit.radius*Math.sin(orbit.phi)*Math.cos(orbit.theta));
-    camera.lookAt(target.x,target.y,target.z);
+      target.z + orbit.radius*Math.sin(orbit.phi)*Math.cos(orbit.theta)
+    );
+    camera.lookAt(target);
   }
-  const dom = renderer.domElement; dom.style.cursor='grab';
-  dom.addEventListener('pointerdown',e=>{orbit.dragging=true;orbit.lx=e.clientX;orbit.ly=e.clientY;dom.style.cursor='grabbing';});
-  window.addEventListener('pointermove',e=>{ if(!orbit.dragging)return; orbit.theta-=(e.clientX-orbit.lx)*0.006; orbit.phi-=(e.clientY-orbit.ly)*0.006; orbit.lx=e.clientX; orbit.ly=e.clientY; });
-  window.addEventListener('pointerup',()=>{orbit.dragging=false;dom.style.cursor='grab';});
-  dom.addEventListener('wheel',e=>{e.preventDefault();orbit.radius+=e.deltaY*0.02;},{passive:false});
   upd();
-  window.__setView=(t,p,r)=>{orbit.theta=t;orbit.phi=p;if(r)orbit.radius=r;upd();};
 
-  function loop(){ requestAnimationFrame(loop); upd(); renderer.render(scene,camera); }
-  loop();
-  function resize(){ const w=mount.clientWidth||mount.parentElement.clientWidth||800, h=mount.clientHeight||mount.parentElement.clientHeight||600; camera.aspect=w/h; camera.updateProjectionMatrix(); renderer.setSize(w,h); }
-  window.__export4K = function(theta, phi, radius){
-    if(theta!==undefined){ orbit.theta=theta; orbit.phi=phi; if(radius)orbit.radius=radius; upd(); }
-    const W=3840, H=2160;
-    camera.aspect = W/H; camera.updateProjectionMatrix();
-    renderer.setSize(W,H);
-    renderer.render(scene,camera);
-    const url = renderer.domElement.toDataURL('image/png');
-    resize(); // restore
-    return url;
-  };
-  window.addEventListener('resize', resize); mount.__forceResize=resize; resize();
+  // Lighting baseline per spec
+  const hemi = new THREE.HemisphereLight(0xC9DAEC, 0x1A1512, 0.32); scene.add(hemi);
+  const key = new THREE.DirectionalLight(cfg.keyColor||0xE8F1FF, cfg.keyIntensity||2.20);
+  key.position.set(18,26,20); key.castShadow = true;
+  key.shadow.mapSize.set(4096,4096);
+  key.shadow.camera.left=-26; key.shadow.camera.right=26;
+  key.shadow.camera.top=26; key.shadow.camera.bottom=-26;
+  key.shadow.camera.near=0.5; key.shadow.camera.far=80;
+  key.shadow.bias=-0.00015; key.shadow.normalBias=0.03; key.shadow.radius=3;
+  scene.add(key);
+  const fill = new THREE.DirectionalLight(0xC6D7F2, 0.48); fill.position.set(-16,12,10); scene.add(fill);
+  const rim = new THREE.DirectionalLight(cfg.rimColor||0xE8F1FF, cfg.rimIntensity||0.85); rim.position.set(-14,16,-20); scene.add(rim);
+  const bounce = new THREE.RectAreaLight(0xFFD7AA, cfg.bounceIntensity||1.25, 18, 10);
+  bounce.position.set(0,5,12); bounce.lookAt(0,3,0); scene.add(bounce);
+
+  const world = new THREE.Group(); scene.add(world);
+  const geoBox = new THREE.BoxGeometry(1,1,1);
+
+  const matCache = new Map();
+  function mat(color, opts){
+    const key = color + JSON.stringify(opts||{});
+    if(matCache.has(key)) return matCache.get(key);
+    const m = new THREE.MeshStandardMaterial({
+      color: color,
+      roughness: opts?.roughness ?? 0.82,
+      metalness: opts?.metalness ?? 0,
+      emissive: opts?.emissive ?? 0x000000,
+      emissiveIntensity: opts?.emissiveIntensity ?? 0,
+      transparent: opts?.transparent ?? false,
+      opacity: opts?.opacity ?? 1,
+    });
+    matCache.set(key, m);
+    return m;
+  }
+
+  function box(x,y,z, w,h,d, color, opts){
+    const m = new THREE.Mesh(geoBox, mat(color, opts?.mat||{}));
+    m.position.set(x,y,z); m.scale.set(w,h,d);
+    m.castShadow = opts?.shadow !== false;
+    m.receiveShadow = true;
+    world.add(m);
+    return m;
+  }
+  function brick(x,y,z, w,d,h, color, opts){
+    return box(x, y+h/2, z, w, h, d, color, opts);
+  }
+
+  cfg.build({brick, box, mat, world, cfg, scene, camera, renderer});
+
+  function resize(){
+    const w = mount.clientWidth, h = mount.clientHeight;
+    camera.aspect = w/h; camera.updateProjectionMatrix();
+    renderer.setSize(w, h, false);
+  }
+  new ResizeObserver(resize).observe(mount);
+  mount.__forceResize = resize;
+
+  let dragging = false, px = 0, py = 0;
+  mount.addEventListener('pointerdown', e => { dragging = true; px = e.clientX; py = e.clientY; mount.setPointerCapture(e.pointerId); });
+  mount.addEventListener('pointermove', e => {
+    if(!dragging) return;
+    orbit.theta -= (e.clientX - px) * 0.005;
+    orbit.phi = Math.max(0.1, Math.min(Math.PI-0.1, orbit.phi + (e.clientY - py) * 0.005));
+    px = e.clientX; py = e.clientY; upd();
+  });
+  mount.addEventListener('pointerup', () => dragging = false);
+  mount.addEventListener('wheel', e => {
+    orbit.radius = Math.max(10, Math.min(100, orbit.radius + e.deltaY * 0.05)); upd();
+  });
+
+  function animate(){
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.__world = world;
+  window.__scene = scene;
+  window.__camera = camera;
+  window.__renderer = renderer;
+  window.__cfg = cfg;
+  window.__setView = function(t,p,r){ orbit.theta=t; orbit.phi=p; if(r) orbit.radius=r; upd(); };
+  window.__ready = true;
 }
 
      CFG.build = function(ctx){ var brick=ctx.brick, box=ctx.box, mat=ctx.mat, world=ctx.world, cfg=ctx.cfg; var qr=cfg.qr;
@@ -316,12 +346,40 @@ function qrPlaza(){
 }
 
 // Micro-brick facade — dense small tiles with tone variation
+
+// ===== NORMAL-BASED SURFACE BUILDER (remediation spec section 1) =====
+function buildSurface(origin, normal, uAxis, vAxis, width, height, module, color, openings, opts){
+  opts = opts || {};
+  const nx = Math.max(1, Math.round(width/module)), ny = Math.max(1, Math.round(height/module));
+  const ow = width/nx, oh = height/ny;
+  for(let i=0;i<nx;i++) for(let j=0;j<ny;j++){
+    const lu = -width/2 + (i+0.5)*ow;
+    const lv = -height/2 + (j+0.5)*oh;
+    let skip = false;
+    if(openings) for(const op of openings){
+      if(Math.abs(lu - op.u) < op.w/2 && Math.abs(lv - op.v) < op.h/2){ skip = true; break; }
+    }
+    if(skip) continue;
+    const tone = opts.toneVar === true ? ((i+j)%3===0 ? color : (i+j)%3===1 ? shade(color,0.9) : shade(color,1.1)) : color;
+    const px = origin[0] + uAxis[0]*lu + vAxis[0]*lv + normal[0]*(opts.layerOffset||0);
+    const py = origin[1] + uAxis[1]*lu + vAxis[1]*lv + normal[1]*(opts.layerOffset||0);
+    const pz = origin[2] + uAxis[2]*lu + vAxis[2]*lv + normal[2]*(opts.layerOffset||0);
+    const dims = [
+      Math.abs(uAxis[0])>0.5 ? ow : (Math.abs(vAxis[0])>0.5 ? oh : (opts.depth||0.15)),
+      Math.abs(uAxis[1])>0.5 ? ow : (Math.abs(vAxis[1])>0.5 ? oh : (opts.depth||0.15)),
+      Math.abs(uAxis[2])>0.5 ? ow : (Math.abs(vAxis[2])>0.5 ? oh : (opts.depth||0.15))
+    ];
+    box(px, py, pz, dims[0]*0.92, dims[1]*0.92, dims[2]*0.92, tone, {shadow:false});
+  }
+}
+
+// microBrickFace — FIXED: side faces now use cx for X coordinate, vary along Z
 function microBrickFace(cx, cy, cz, w, h, color, face){
   const tile=0.5, nx=Math.ceil(w/tile), ny=Math.ceil(h/tile);
   for(let i=0;i<nx;i++) for(let j=0;j<ny;j++){
     const tone = (i+j)%3===0 ? color : (i+j)%3===1 ? shade(color,0.9) : shade(color,1.1);
     const px = cx - w/2 + (i+0.5)*tile, py = cy - h/2 + (j+0.5)*tile;
-    if(face==='sideR') box(cz, py, -px, 0.15, tile*0.92, tile*0.92, tone, {shadow:false});
+    if(face==='sideR' || face==='sideL') box(cx, py, cz - w/2 + (i+0.5)*tile, 0.15, tile*0.92, tile*0.92, tone, {shadow:false});
     else box(px, py, cz, tile*0.92, tile*0.92, 0.15, tone, {shadow:false});
   }
 }
@@ -428,81 +486,177 @@ function shade(col, f){
 }
 
 
-const STEEL=0x2E6B8A, STEELD=0x1a4a6a, SILVER=0x9aa0a6, BLACK=0x1a1a1a,
-      WHITE=0xf8f4ec, GLASSW=0xffc966, DARK=0x0e1b2a, RED=0xD42B1E;
-qrPlaza();
-const W=16, D=10, H=7;
-brick(0, 0.15, 0, W, D, 0.3, 0x4a5560);
-microBrickFace(0, H/2+0.15, D/2+0.05, W, H-0.3, 0x4a5560, 'front');
-microBrickFace(0, H/2+0.15, -D/2-0.05, W, H-0.3, 0x3a4550, 'front');
-microBrickFace(W/2+0.05, H/2+0.15, 0, D, H-0.3, 0x3a4550, 'sideR');
-microBrickFace(-W/2-0.05, H/2+0.15, 0, D, H-0.3, 0x3a4550, 'sideR');
-brick(0, 0.3, 0, W-0.4, D-0.4, H-0.6, 0x2a2a2a);
-brick(0, H+0.1, 0, W+0.4, D+0.4, 0.5, 0x1a1a1a);
-brick(0, H+0.5, 0, W+0.2, D+0.2, 0.3, 0x0a0a0a);
+// ===== ABSOLUTE TRANSPORTATION — LUXURY OPERATIONAL HUB (remediation spec §6) =====
+const CHARCOAL=0x25282D, BLACK=0x111315, NAVY=0x17354A, CHAMPAGNE=0xC8AA72,
+      GLASSW=0x88ccff, WHITE=0xE6ECF0, SILVER=0x9aa0a6, DARK=0x1a1a1a;
 
-// Office tower on left
-brick(-W/2+3, H+1.0, 0, 5, D, 3.5, 0x3a4550);
-microBrickFace(-W/2+3, H+1.0+1.75, D/2+0.05, 5, 3.5, 0x4a5560, 'front');
-for(let i=0;i<3;i++){
-  box(-W/2+3, H+1.5+i*1.2, D/2+0.1, 4.0, 1.0, 0.12, GLASSW, {shadow:false});
-}
+// ===== GROUND: arrival lane + sidewalk + road =====
+// Arrival lane slab: X=-4.75..8.25, Z=5.20..11.20, dark stone
+brick(1.75, 0, 8.20, 13.0, 6.0, 0.16, 0x34383D);
+// Champagne inlay along edges
+box(-4.75, 0.17, 8.20, 0.20, 0.02, 6.00, CHAMPAGNE, {shadow:false});
+box(8.25, 0.17, 8.20, 0.20, 0.02, 6.00, CHAMPAGNE, {shadow:false});
+// Sidewalk
+brick(0, 0, 12.20, 20, 2.0, 0.22, 0x2a2a2e);
+// Curb
+brick(0, 0.22, 13.45, 20, 0.30, 0.28, 0x6a6a6a);
+// Road
+brick(0, 0, 14.50, 20, 3.0, 0.10, 0x1a1a1a);
 
-// Garage doors on right
-box(W/2-4, 1.5, D/2+0.1, 5.0, 3.0, 0.2, 0x6a6a6a);
-box(W/2-4, 1.5, D/2+0.15, 4.6, 2.6, 0.15, 0x8a8a8a);
-box(W/2-4, 3.2, D/2+0.2, 5.2, 0.25, 0.12, 0x4a4a4a);
+// ===== DISPATCH TOWER =====
+const TW=7.50, TD=10.00, TH=10.25, TX=-6.25, TZ=-0.50;
+// Front Z0=+5.00
+buildSurface([TX, TH/2+0.11, 5.00], [0,0,1], [1,0,0], [0,1,0], TW, TH, 0.5, CHARCOAL, null, {depth:0.15, toneVar:false});
+buildSurface([TX-TW/2, TH/2+0.11, TZ], [-1,0,0], [0,0,1], [0,1,0], TD, TH, 0.5, BLACK, null, {depth:0.15, toneVar:false});
+buildSurface([TX+TW/2, TH/2+0.11, TZ], [1,0,0], [0,0,-1], [0,1,0], TD, TH, 0.5, CHARCOAL, null, {depth:0.15, toneVar:false});
 // Interior
-box(W/2-4, 1.2, D/2-0.4, 3.5, 2.0, 0.4, 0x2a2a2a, {shadow:false});
-box(W/2-4, 0.8, D/2-0.2, 2.0, 0.6, 1.0, 0x1a1a1a, {shadow:false});
+brick(TX, 0.11, TZ, TW-0.3, TD-0.3, 0.22, 0x1a1a1a);
+brick(TX, TH-0.11, TZ, TW-0.3, TD-0.3, 0.22, 0x0a0a0a);
 
-// Sign
-box(-W/2+3, H+2.5, D/2+0.4, 4.5, 1.5, 0.4, STEEL);
-drawName("ABSOLUTE", H+2.1, D/2+0.65, 0.26, WHITE, 0.25);
-drawName("TRANSPORTATION", H+1.7, D/2+0.65, 0.1, SILVER, 0.15);
+// ===== GARAGE/SERVICE HALL =====
+const GW=13.00, GD=11.50, GH=6.75, GX=4.00, GZ=-1.25;
+buildSurface([GX, GH/2+0.11, 4.50], [0,0,1], [1,0,0], [0,1,0], GW, GH, 0.5, CHARCOAL, [
+  {u:-2.50, v:2.65, w:4.20, h:4.80},  // bay 1
+  {u:2.30, v:2.65, w:4.20, h:4.80},   // bay 2
+], {depth:0.15, toneVar:false});
+buildSurface([GX-GW/2, GH/2+0.11, GZ], [-1,0,0], [0,0,1], [0,1,0], GD, GH, 0.5, BLACK, null, {depth:0.15, toneVar:false});
+buildSurface([GX+GW/2, GH/2+0.11, GZ], [1,0,0], [0,0,-1], [0,1,0], GD, GH, 0.5, CHARCOAL, null, {depth:0.15, toneVar:false});
+// Interior
+brick(GX, 0.11, GZ, GW-0.3, GD-0.3, 0.22, 0x1a1a1a);
+brick(GX, GH-0.11, GZ, GW-0.3, GD-0.3, 0.22, 0x0a0a0a);
 
-// Dispatch window
-box(-W/2+3, 2.0, D/2+0.1, 3.0, 2.0, 0.12, GLASSW, {shadow:false});
-box(-W/2+3, 1.2, D/2-0.3, 1.8, 0.8, 0.35, 0x3a3a3a, {shadow:false});
-box(-W/2+3, 1.8, D/2-0.3, 0.7, 0.4, 0.25, 0x2a4a9a, {shadow:false});
+// ===== ARRIVAL CANOPY =====
+// center (1.75, 5.65, 7.85), 13.00 W x 0.45 H x 5.00 D
+box(1.75, 5.65, 7.85, 13.00, 0.45, 5.00, BLACK);
+// Four columns
+box(-4.25, 2.80, 6.15, 0.30, 5.60, 0.30, CHARCOAL);
+box(-0.25, 2.80, 6.15, 0.30, 5.60, 0.30, CHARCOAL);
+box(3.75, 2.80, 6.15, 0.30, 5.60, 0.30, CHARCOAL);
+box(7.75, 2.80, 6.15, 0.30, 5.60, 0.30, CHARCOAL);
 
-// Fleet
-box(-W/2-2, 0.5, D/2+1.5, 3.2, 1.0, 1.6, 0x1a1a1a);
-box(-W/2-2, 1.2, D/2+1.5, 1.8, 0.6, 1.4, 0x1a1a1a);
-box(-W/2-2, 1.35, D/2+2.35, 1.5, 0.4, 0.12, 0xbfe3ff, {shadow:false});
-box(-W/2-2, 1.35, D/2+0.65, 1.5, 0.4, 0.12, 0x8a9aaa, {shadow:false});
-[[-1.0,-0.7],[1.0,-0.7],[-1.0,0.7],[1.0,0.7]].forEach(p=>box(-W/2-2+p[0], 0.3, D/2+1.5+p[1], 0.6, 0.6, 0.25, 0x2a2a2a));
+// ===== ROUTE/DEPARTURE FIN =====
+// vertical fin at (-9.60, 5.25, 0.25), 0.50 W x 6.50 H x 3.75 D
+box(-9.60, 5.25, 0.25, 0.50, 6.50, 3.75, NAVY);
+// Abstract route-line motif
+paintGlyph(["..#....","..#....","..##...","...#...","...#...","...##..","....#..","....#.."], -9.60, 5.25, 2.15, 0.20, {'#':CHAMPAGNE}, 'front');
 
-box(0, 0.6, D/2+2.0, 3.5, 1.2, 1.8, SILVER);
-box(0, 1.4, D/2+2.0, 2.0, 0.7, 1.6, SILVER);
-box(0, 1.55, D/2+2.85, 1.7, 0.45, 0.12, 0xbfe3ff, {shadow:false});
-box(0, 1.55, D/2+1.15, 1.7, 0.45, 0.12, 0x8a9aaa, {shadow:false});
-[[-1.1,-0.8],[1.1,-0.8],[-1.1,0.8],[1.1,0.8]].forEach(p=>box(p[0], 0.35, D/2+2.0+p[1], 0.65, 0.65, 0.28, 0x2a2a2a));
+// ===== SIGN SYSTEM =====
+// Tower sign field: center (-6.25, 8.30, 5.35), 6.40 W x 2.25 H x 0.30 D
+box(-6.25, 8.30, 5.35, 6.40, 2.25, 0.30, BLACK);
+box(-6.25, 8.30, 5.33, 6.10, 2.05, 0.32, 0x0a0a0a, {shadow:false});
+// ABSOLUTE: center (-6.25, 8.62, 5.95), cap 0.92, champagne
+drawName("ABSOLUTE", 7.70, 5.95, 0.131, CHAMPAGNE, 0.25);
+// TRANSPORTATION: center (-6.25, 7.62, 5.95), cap 0.34, cool white
+drawName("TRANSPORTATION", 7.28, 5.95, 0.048, WHITE, 0.20);
+// Arrival-lane monogram: small A at (1.75, 5.68, 10.38)
+drawName("A", 5.32, 10.38, 0.103, CHAMPAGNE, 0.15);
 
-van(W/2+4, D/2+1.5, 0x1a1a1a, "ABSOLUTE", WHITE, 1.0);
+// ===== DISPATCH STUDIO (tower front) =====
+// center (-6.25, 3.25), opening 5.80 W x 4.60 H
+box(-6.25, 3.25, 4.80, 5.80, 4.60, 0.08, GLASSW, {shadow:false, mat:{transparent:true, opacity:0.34, roughness:0.12, transmission:0.55, ior:1.45, metalness:0}});
+box(-6.25, 3.25, 5.45, 6.00, 4.80, 0.12, BLACK);
+// Two desks
+box(-7.55, 1.60, 4.00, 1.40, 0.75, 0.80, 0x3a3a3a);
+box(-5.10, 1.60, 4.00, 1.40, 0.75, 0.80, 0x3a3a3a);
+// Keyboards/phones
+box(-7.55, 2.05, 4.20, 0.60, 0.08, 0.40, 0x2a2a2a, {shadow:false});
+box(-5.10, 2.05, 4.20, 0.60, 0.08, 0.40, 0x2a2a2a, {shadow:false});
+// Route/status screens
+box(-7.55, 2.80, 2.80, 1.20, 0.80, 0.08, 0x7CC7FF, {shadow:false, mat:{emissive:0x7CC7FF, emissiveIntensity:0.65}});
+box(-5.10, 2.80, 2.80, 1.20, 0.80, 0.08, 0x7CC7FF, {shadow:false, mat:{emissive:0x7CC7FF, emissiveIntensity:0.65}});
+// Coffee maker
+box(-8.45, 1.45, 2.80, 0.40, 0.50, 0.30, 0x3a3a3a);
+// Route planning wall
+box(-6.25, 3.00, 0.80, 5.00, 3.00, 0.10, 0x2a2a2e);
+// Driver staging door
+box(-4.30, 1.50, 0.80, 1.40, 3.00, 0.12, NAVY);
 
-// Side wall
-box(W/2+0.25, 2.5, 0, 0.4, 3.0, 3.5, STEEL, {shadow:false});
+// ===== GARAGE BAYS =====
+// Bay 1: center (1.00, 2.65), opening 4.20 W x 4.80 H
+box(1.00, 2.65, 4.30, 4.20, 4.80, 0.08, GLASSW, {shadow:false, mat:{transparent:true, opacity:0.34, roughness:0.12}});
+box(1.00, 2.65, 4.95, 4.40, 5.00, 0.12, BLACK);
+// Black SUV inside
+box(1.00, 1.20, 3.30, 2.60, 1.00, 1.60, 0x1a1a1a);
+box(1.00, 1.80, 3.30, 1.60, 0.60, 1.40, 0x1a1a1a);
+box(1.00, 1.95, 4.15, 1.40, 0.35, 0.12, 0xbfe3ff, {shadow:false});
+box(1.00, 1.95, 2.45, 1.40, 0.35, 0.12, 0x8a9aaa, {shadow:false});
+[[-0.85,-0.65],[0.85,-0.65],[-0.85,0.65],[0.85,0.65]].forEach(p=>box(1.00+p[0], 0.35, 3.30+p[1], 0.55, 0.55, 0.25, 0x2a2a2a));
+// Service cart
+box(-0.50, 0.60, 3.80, 0.80, 1.20, 0.50, 0x6a4a2a);
+// Tool wall
+box(1.00, 2.00, 0.00, 3.50, 2.50, 0.10, 0x3a3a3a);
+
+// Bay 2: center (5.80, 2.65), opening 4.20 W x 4.80 H
+box(5.80, 2.65, 4.30, 4.20, 4.80, 0.08, GLASSW, {shadow:false, mat:{transparent:true, opacity:0.34, roughness:0.12}});
+box(5.80, 2.65, 4.95, 4.40, 5.00, 0.12, BLACK);
+// Dark navy sedan
+box(5.80, 1.10, 3.20, 2.80, 0.90, 1.70, 0x152B3D);
+box(5.80, 1.75, 3.20, 1.80, 0.55, 1.50, 0x152B3D);
+box(5.80, 1.90, 4.10, 1.60, 0.35, 0.12, 0xbfe3ff, {shadow:false});
+box(5.80, 1.90, 2.30, 1.60, 0.35, 0.12, 0x8a9aaa, {shadow:false});
+[[-0.95,-0.70],[0.95,-0.70],[-0.95,0.70],[0.95,0.70]].forEach(p=>box(5.80+p[0], 0.35, 3.20+p[1], 0.60, 0.60, 0.28, 0x2a2a2a));
+// Detailing cart
+box(7.00, 0.60, 3.80, 0.80, 1.20, 0.50, 0x6a4a2a);
+// Storage/charging wall
+box(5.80, 2.00, -0.20, 3.50, 2.50, 0.10, 0x3a3a3a);
+
+// ===== VEHICLES ON ARRIVAL LANE =====
+// Black SUV: center (0.20, 8.20), length 5.60 along Z
+box(0.20, 1.20, 8.20, 2.55, 1.00, 5.60, 0x1a1a1a);
+box(0.20, 1.80, 8.20, 1.80, 0.60, 4.00, 0x1a1a1a);
+box(0.20, 1.95, 10.20, 1.60, 0.35, 0.12, 0xbfe3ff, {shadow:false});
+box(0.20, 1.95, 6.20, 1.60, 0.35, 0.12, 0x8a9aaa, {shadow:false});
+[[-0.90,-1.80],[0.90,-1.80],[-0.90,1.80],[0.90,1.80]].forEach(p=>box(0.20+p[0], 0.35, 8.20+p[1], 0.60, 0.60, 0.28, 0x2a2a2a));
+// Premium sedan: center (6.10, 10.70), length 5.30 along X
+box(6.10, 1.10, 10.70, 5.30, 0.90, 1.80, 0x152B3D);
+box(6.10, 1.75, 10.70, 3.50, 0.55, 1.60, 0x152B3D);
+box(8.40, 1.90, 10.70, 1.60, 0.35, 0.12, 0xbfe3ff, {shadow:false});
+box(3.80, 1.90, 10.70, 1.60, 0.35, 0.12, 0x8a9aaa, {shadow:false});
+[[-1.60,-0.70],[1.60,-0.70],[-1.60,0.70],[1.60,0.70]].forEach(p=>box(6.10+p[0], 0.35, 10.70+p[1], 0.60, 0.60, 0.28, 0x2a2a2a));
+
+// ===== PEOPLE =====
+// Driver near SUV
+minifig(-1.35, 9.85, 0x1a1a1a, 0x2a2a2a);
+// Traveler with suitcases
+minifig(2.00, 9.90, 0x2a4a9a, 0x2a2a2a);
+// Suitcases
+box(2.55, 0.40, 9.70, 0.50, 0.80, 0.30, 0x6a4a2a);
+box(2.85, 0.35, 10.20, 0.45, 0.70, 0.25, 0x8a5a3a);
+// Luggage cart
+box(4.05, 0.60, 9.45, 0.90, 0.80, 0.50, 0x6a4a2a);
+box(4.05, 1.20, 9.45, 0.80, 0.20, 0.45, 0x8a5a3a);
+// Dispatch staff inside
+minifig(-7.55, 3.20, 0x3a3a3a, 0x2a2a2a);
+
+// ===== BOLLARDS =====
+[-4.10,-1.80,0.50,2.80,5.10,7.40].forEach(x=>{
+  box(x, 0.425, 5.45, 0.15, 0.85, 0.15, CHAMPAGNE);
+});
+
+// ===== REAR =====
+// Loading/service door
+box(4.00, 1.50, -7.05, 2.80, 3.00, 0.15, 0x4a4a4a);
+// Tire/luggage cart
+box(3.00, 0.60, -7.15, 0.80, 1.20, 0.50, 0x6a4a2a);
+// Utility meters
+box(6.00, 1.50, -7.05, 0.60, 1.00, 0.15, 0x5a5a5a);
+
+// ===== QR GROUND (0.45-unit tiles) =====
 {
-  const word="AIRPORT", s=0.2, tw=glyphCols(word)*s; let cz=-tw/2;
-  for(const ch of word){
-    const g=F5[ch]; if(!g||!g[0]){cz+=2*s;continue;} const gw=g[0].length;
-    for(let r=0;r<g.length;r++) for(let c=0;c<gw;c++)
-      if(g[r][c]==='1') box(W/2+0.55, 3.0+(g.length-1-r)*s, cz+c*s, 0.35, s*0.85, s*0.85, WHITE, {shadow:false});
-    cz+=(gw+1.5)*s;
+  const N=qr.size, tile=0.45, off=-N*tile/2;
+  for(let r=0;r<N;r++) for(let c=0;c<N;c++){
+    const on = qr.matrix[r][c]===1;
+    box(off+c*tile+tile/2, 0.04, off+r*tile+tile/2, tile*0.96,0.08,tile*0.96, on?0x171717:0xE7E1D5, {shadow:false});
   }
+  box(0, 0.12, 0, N*tile+1.2, 0.24, N*tile+1.2, 0x26292E, {shadow:false});
 }
 
-// Street
-planter(-W/2-1.5, D/2-0.5, STEEL, 0x2f7a3a);
-planter( W/2+1.5, D/2-0.5, STEEL, 0x2f7a3a);
-minifig(-W/2-2.5, D/2+0.5, 0x1a1a1a, 0x2a2a2a);
-minifig( W/2+4, D/2+2.5, STEEL, 0x2a2a2a);
-lampPost(-W/2-3.5, D/2+3.0);
-lampPost( W/2+3.5, D/2+3.0);
-box(-W/2+5, 0.4, D/2+1.0, 0.9, 0.7, 0.5, 0x6a4a2a);
-box(-W/2+5, 0.95, D/2+1.0, 0.7, 0.35, 0.45, 0x8a5a3a);
-sandwichBoard(-W/2+6, D/2+2.5, ["24/7","AIRPORT"], 0.11, STEEL, WHITE);
+// Scene-specific lighting
+cfg.keyColor = 0xDCEBFF;
+cfg.keyIntensity = 2.45;
+cfg.rimColor = 0x5D87AC;
+cfg.rimIntensity = 1.05;
+cfg.exposure = 1.10;
 
      };
      buildVoxelScene(mount, CFG);
